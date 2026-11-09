@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        try {
+          var origFetch = window.fetch;
+          if (typeof origFetch === 'function') {
+            Object.defineProperty(window, 'fetch', {
+              value: origFetch.bind(window),
+              writable: true,
+              configurable: true,
+              enumerable: true
+            });
+          }
+        } catch (e) {
+          // ignore
+        }
+      })();
+    </script>
+    <title>ระบบจัดการข้อมูลการขนส่งและงานซ่อมบำรุง</title>
+    <meta name="description" content="ระบบดึงข้อมูลแบบเรียลไทม์และค้นหาข้อมูลจาก Google Sheets สำหรับจัดการงานเคลื่อนย้ายสินค้าและบันทึกงานซ่อมบำรุง" />
+    <meta property="og:title" content="ระบบจัดการข้อมูลการขนส่งและงานซ่อมบำรุง" />
+    <meta property="og:description" content="ระบบดึงข้อมูลแบบเรียลไทม์และค้นหาข้อมูลจาก Google Sheets สำหรับจัดการงานเคลื่อนย้ายสินค้าและบันทึกงานซ่อมบำรุง" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="งานขนส่ง&ซ่อม" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚛</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

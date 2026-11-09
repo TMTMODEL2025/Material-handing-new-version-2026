@@ -1,0 +1,6 @@
+{
+  "name": "ระบบจัดการข้อมูลการขนส่งและงานซ่อมบำรุง",
+  "description": "ระบบดึงข้อมูลแบบเรียลไทม์และค้นหาข้อมูลจาก Google Sheets สำหรับจัดการงานเคลื่อนย้ายสินค้าและบันทึกงานซ่อมบำรุง",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
